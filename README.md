@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumo Estratégico - Fiberhome</title>
+    <title>Strategic Summary - Fiberhome</title>
     <style>
         /* Paleta de Cores Fiberhome */
         :root {
@@ -20,7 +20,7 @@
             color: var(--text-dark);
             line-height: 1.6;
             margin: 0;
-            padding: 40px 20px;
+            padding: 60px 20px 40px 20px; /* Top padding adjusted for lang toggle */
         }
 
         .container {
@@ -32,14 +32,46 @@
             overflow: hidden;
             padding: 40px;
             border-top: 8px solid var(--fiber-orange);
+            position: relative;
         }
 
+        /* Language Toggle Styles */
+        .lang-switch-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .lang-switch-container button {
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            padding: 6px 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--fiber-blue);
+            transition: 0.3s;
+            margin-left: 5px;
+        }
+        .lang-switch-container button.active-lang {
+            background-color: var(--fiber-orange);
+            color: white;
+            border-color: var(--fiber-orange);
+        }
+
+        /* Language Display Logic */
+        .lang-pt { display: none !important; }
+        body.pt-active .lang-en { display: none !important; }
+        body.pt-active .lang-pt { display: inline !important; }
+
+        /* Typography & Layout */
         h1 {
             color: var(--fiber-blue);
             font-size: 2.2em;
             margin-top: 0;
             border-bottom: 2px solid #eee;
             padding-bottom: 15px;
+            padding-right: 100px; /* Space for language buttons */
         }
 
         h2 {
@@ -140,62 +172,149 @@
 </head>
 <body>
     <div class="container">
-        <h1>Resumo Estratégico - Adesão ao Edital 021/2025</h1>
-        <p>Baseado na análise do Edital de Concorrência Pública nº 021/2025 da Prefeitura de Pindamonhangaba (Smart City as a Service - SCaaS) e no portfólio de produtos Fiberhome.</p>
+        
+        <div class="lang-switch-container">
+            <button id="btn-en" class="active-lang" onclick="switchLanguage('en')">EN</button>
+            <button id="btn-pt" onclick="switchLanguage('pt')">PT</button>
+        </div>
 
-        <h2>1. O que a Fiberhome atende perfeitamente</h2>
+        <h1>
+            <span class="lang-en">Strategic Summary - Compliance with Bid 021/2025</span>
+            <span class="lang-pt">Resumo Estratégico - Adesão ao Edital 021/2025</span>
+        </h1>
+        
+        <p>
+            <span class="lang-en">Based on the analysis of Public Tender No. 021/2025 from the Municipality of Pindamonhangaba (Smart City as a Service - SCaaS) and the Fiberhome product portfolio.</span>
+            <span class="lang-pt">Baseado na análise do Edital de Concorrência Pública nº 021/2025 da Prefeitura de Pindamonhangaba (Smart City as a Service - SCaaS) e no portfólio de produtos Fiberhome.</span>
+        </p>
+
+        <h2>
+            <span class="lang-en">1. What Fiberhome perfectly fulfills</span>
+            <span class="lang-pt">1. O que a Fiberhome atende perfeitamente</span>
+        </h2>
         <ul>
             <li>
-                <strong>Rede Metro Ethernet e Concentradores (Core/Edge):</strong><br>
-                <a href="#link-edital-olt" class="edital-link" title="Clique para ver o item no edital">Requisito do Edital: O projeto exige pontos de concentração com "Hybrid XGS-PON/GPON OLT"</a><br>
-                <span class="solution">Solução Fiberhome:</span> Série AN6000 (AN6000-15 e AN6000-17), plataformas híbridas GPON/XGS-PON (e até 50G PON).
+                <strong>
+                    <span class="lang-en">Metro Ethernet Network and Concentrators (Core/Edge):</span>
+                    <span class="lang-pt">Rede Metro Ethernet e Concentradores (Core/Edge):</span>
+                </strong><br>
+                <a href="#link-edital-olt" class="edital-link" title="See item in bid">
+                    <span class="lang-en">Bid Requirement: The project requires concentration points with "Hybrid XGS-PON/GPON OLT"</span>
+                    <span class="lang-pt">Requisito do Edital: O projeto exige pontos de concentração com "Hybrid XGS-PON/GPON OLT"</span>
+                </a><br>
+                <span class="solution">
+                    <span class="lang-en">Fiberhome Solution:</span>
+                    <span class="lang-pt">Solução Fiberhome:</span>
+                </span> 
+                <span class="lang-en">AN6000 Series (AN6000-15 and AN6000-17), hybrid GPON/XGS-PON platforms (and up to 50G PON).</span>
+                <span class="lang-pt">Série AN6000 (AN6000-15 e AN6000-17), plataformas híbridas GPON/XGS-PON (e até 50G PON).</span>
             </li>
             <li>
-                <strong>Equipamentos de Borda e Wi-Fi 6 (CPEs):</strong><br>
-                <a href="#link-edital-wifi" class="edital-link" title="Clique para ver o item no edital">Requisito do Edital: Conectividade Wi-Fi 6 em prédios públicos e ruas</a><br>
-                <span class="solution">Solução Fiberhome:</span> SR1041Y (Wi-Fi 6), com suporte a TR-369 para telemetria avançada.
+                <strong>
+                    <span class="lang-en">Edge Equipment and Wi-Fi 6 (CPEs):</span>
+                    <span class="lang-pt">Equipamentos de Borda e Wi-Fi 6 (CPEs):</span>
+                </strong><br>
+                <a href="#link-edital-wifi" class="edital-link" title="See item in bid">
+                    <span class="lang-en">Bid Requirement: Wi-Fi 6 connectivity in public buildings and streets</span>
+                    <span class="lang-pt">Requisito do Edital: Conectividade Wi-Fi 6 em prédios públicos e ruas</span>
+                </a><br>
+                <span class="solution">
+                    <span class="lang-en">Fiberhome Solution:</span>
+                    <span class="lang-pt">Solução Fiberhome:</span>
+                </span> 
+                <span class="lang-en">SR1041Y (Wi-Fi 6), with TR-369 support for advanced telemetry.</span>
+                <span class="lang-pt">SR1041Y (Wi-Fi 6), com suporte a TR-369 para telemetria avançada.</span>
             </li>
             <li>
-                <strong>ONTs Ópticas Padrão:</strong><br>
-                <a href="#link-edital-pontos" class="edital-link" title="Clique para ver o item no edital">Requisito do Edital: Pontos de monitoramento e prédios com necessidade apenas de link óptico</a><br>
-                <span class="solution">Solução Fiberhome:</span> Modelos HG6154F3, HG6145F e HG6245D.
+                <strong>
+                    <span class="lang-en">Standard Optical ONTs:</span>
+                    <span class="lang-pt">ONTs Ópticas Padrão:</span>
+                </strong><br>
+                <a href="#link-edital-pontos" class="edital-link" title="See item in bid">
+                    <span class="lang-en">Bid Requirement: Monitoring points and buildings needing only an optical link</span>
+                    <span class="lang-pt">Requisito do Edital: Pontos de monitoramento e prédios com necessidade apenas de link óptico</span>
+                </a><br>
+                <span class="solution">
+                    <span class="lang-en">Fiberhome Solution:</span>
+                    <span class="lang-pt">Solução Fiberhome:</span>
+                </span> 
+                <span class="lang-en">Models HG6154F3, HG6145F, and HG6245D.</span>
+                <span class="lang-pt">Modelos HG6154F3, HG6145F e HG6245D.</span>
             </li>
         </ul>
 
-        <h2>2. Onde será necessário compor com parceiros ou validar roadmap</h2>
+        <h2>
+            <span class="lang-en">2. Where it will be necessary to partner or validate the roadmap</span>
+            <span class="lang-pt">2. Onde será necessário compor com parceiros ou validar roadmap</span>
+        </h2>
         <ul>
             <li>
-                <strong>Wi-Fi 7 Indoor/Outdoor:</strong> 
-                Necessário validar disponibilidade e prazos de equipamentos certificados no Brasil.
+                <strong>
+                    <span class="lang-en">Wi-Fi 7 Indoor/Outdoor:</span>
+                    <span class="lang-pt">Wi-Fi 7 Indoor/Outdoor:</span>
+                </strong> 
+                <span class="lang-en">Need to validate availability and lead times for certified equipment in Brazil.</span>
+                <span class="lang-pt">Necessário validar disponibilidade e prazos de equipamentos certificados no Brasil.</span>
             </li>
             <li>
-                <strong>Next Generation Firewall (NGFW) e SD-WAN:</strong> 
-                Requisito atendido por marcas especializadas (Fortinet, Palo Alto, Cisco).
+                <strong>
+                    <span class="lang-en">Next Generation Firewall (NGFW) and SD-WAN:</span>
+                    <span class="lang-pt">Next Generation Firewall (NGFW) e SD-WAN:</span>
+                </strong> 
+                <span class="lang-en">Requirement met by specialized brands (Fortinet, Palo Alto, Cisco).</span>
+                <span class="lang-pt">Requisito atendido por marcas especializadas (Fortinet, Palo Alto, Cisco).</span>
                 <div class="question-highlight">
-                    Pergunta Estratégica: A Fiberhome deve focar estritamente em transporte e acesso ou buscar parcerias oficiais para compor a camada de segurança NGFW?
+                    <span>
+                        <span class="lang-en">Strategic Question: Should Fiberhome focus strictly on transport and access, or seek official partnerships to compose the NGFW security layer?</span>
+                        <span class="lang-pt">Pergunta Estratégica: A Fiberhome deve focar estritamente em transporte e acesso ou buscar parcerias oficiais para compor a camada de segurança NGFW?</span>
+                    </span>
                 </div>
             </li>
             <li>
-                <strong>Conectividade 5G/LTE e Satélite:</strong> 
-                Prexx pode validar a disponibilidade para compor o projeto com modems/SIM cards de operadoras móveis.
+                <strong>
+                    <span class="lang-en">5G/LTE and Satellite Connectivity:</span>
+                    <span class="lang-pt">Conectividade 5G/LTE e Satélite:</span>
+                </strong> 
+                <span class="lang-en">Prexx can validate availability to compose the project with modems/SIM cards from mobile operators.</span>
+                <span class="lang-pt">Prexx pode validar a disponibilidade para compor o projeto com modems/SIM cards de operadoras móveis.</span>
             </li>
         </ul>
 
-        <h2>Resumo da Estratégia Comercial Sugerida</h2>
+        <h2>
+            <span class="lang-en">Suggested Commercial Strategy Summary</span>
+            <span class="lang-pt">Resumo da Estratégia Comercial Sugerida</span>
+        </h2>
         <p>
-            A Fiberhome fornece o "coração" da rede óptica exigida pelo município. A abordagem junto aos ISPs e integradores deve destacar o combo:
+            <span class="lang-en">Fiberhome provides the "heart" of the optical network required by the municipality. The approach to ISPs and integrators should highlight the combo:</span>
+            <span class="lang-pt">A Fiberhome fornece o "coração" da rede óptica exigida pelo município. A abordagem junto aos ISPs e integradores deve destacar o combo:</span>
         </p>
         
         <div class="combo-box">
             <ul>
                 <li>Hybrid OLTs (AN6000)</li>
-                <li>Wi-Fi 6 ONTs (HG6145F1 e HG6145F3)</li>
+                <li>Wi-Fi 6 ONTs (HG6145F1 <span class="lang-en">and</span><span class="lang-pt">e</span> HG6145F3)</li>
             </ul>
         </div>
 
         <p style="margin-top: 20px;">
-            O argumento principal de venda é a robustez dos OLTs para suportar tráfego intenso de câmeras e sensores, aliado às capacidades de gestão avançada (TR-369) dos roteadores Wi-Fi 6, reduzindo drasticamente o OPEX para o provedor vencedor através do monitoramento remoto.
+            <span class="lang-en">The main selling point is the robustness of the OLTs to withstand heavy traffic from cameras and sensors, coupled with the advanced management capabilities (TR-369) of the Wi-Fi 6 routers, drastically reducing OPEX for the winning provider through remote monitoring.</span>
+            <span class="lang-pt">O argumento principal de venda é a robustez dos OLTs para suportar tráfego intenso de câmeras e sensores, aliado às capacidades de gestão avançada (TR-369) dos roteadores Wi-Fi 6, reduzindo drasticamente o OPEX para o provedor vencedor através do monitoramento remoto.</span>
         </p>
     </div>
+
+    <script>
+        // Lógica de Alternância de Idioma
+        function switchLanguage(lang) {
+            if(lang === 'pt') {
+                document.body.classList.add('pt-active');
+                document.getElementById('btn-pt').classList.add('active-lang');
+                document.getElementById('btn-en').classList.remove('active-lang');
+            } else {
+                document.body.classList.remove('pt-active');
+                document.getElementById('btn-en').classList.add('active-lang');
+                document.getElementById('btn-pt').classList.remove('active-lang');
+            }
+        }
+    </script>
 </body>
 </html>
