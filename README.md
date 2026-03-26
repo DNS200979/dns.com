@@ -148,12 +148,12 @@
             <li>
                 <strong>Rede Metro Ethernet e Concentradores (Core/Edge):</strong><br>
                 <a href="#link-edital-olt" class="edital-link" title="Clique para ver o item no edital">Requisito do Edital: O projeto exige pontos de concentração com "Hybrid XGS-PON/GPON OLT"</a><br>
-                <span class="solution">Solução Fiberhome:</span> Série AN6000 (AN6000-15 e AN6000-17), plataformas híbridas GPON/XGS-PON (e até 50G PON).
+                <span class="solution">Solução Fiberhome:</span> Série AN6000 (AN6000-15), plataformas híbridas GPON/XGS-PON (e até 50G PON).
             </li>
             <li>
                 <strong>Equipamentos de Borda e Wi-Fi 6 (CPEs):</strong><br>
                 <a href="#link-edital-wifi" class="edital-link" title="Clique para ver o item no edital">Requisito do Edital: Conectividade Wi-Fi 6 em prédios públicos e ruas</a><br>
-                <span class="solution">Solução Fiberhome:</span> SR1041Y (Wi-Fi 6), com suporte a TR-369 para telemetria avançada.
+                <span class="solution">Solução Fiberhome:</span> HG6145F3 (Wi-Fi 6), com suporte a TR-369 para telemetria avançada. OBS: validar se o TR-369 está 100%, posso sugerir parceiros para teste, ja reporvamos na Alohha por causa desse protocolo, requer atenção!
             </li>
             <li>
                 <strong>ONTs Ópticas Padrão:</strong><br>
